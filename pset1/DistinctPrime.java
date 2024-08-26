@@ -9,9 +9,8 @@ public class DistinctPrime {
 
 		public static IntStream omega(int n) {
 			return IntStream.rangeClosed(1, n).
-				map(x -> (int) IntStream.rangeClosed(1, x).
-				filter(y -> x % y == 0).
-				filter(y -> isPrime(y)).
-				count());
+				map(x -> IntStream.rangeClosed(1, x).
+				filter(y -> x % y == 0 && isPrime(y)).
+				reduce(0, (a, b) -> a + 1));
 		}
 }
