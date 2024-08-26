@@ -11,9 +11,9 @@ public class DotProduct {
 	record Pair<T, U>(T t, U u) {}
 	
 	public static Stream<Pair> product(int a, int b) {
-		return IntStream.rangeClosed(a, b).
-			boxed().
-			flatMap(x -> IntStream.rangeClosed(a, b).
-				mapToObj(y -> new Pair<Integer, Integer>(x, y)));
+		return IntStream.rangeClosed(a, b)
+			.boxed()
+			.flatMap(x -> IntStream.rangeClosed(a, b)
+				.mapToObj(y -> new Pair<Integer, Integer>(x, y)));
 	}
 }
