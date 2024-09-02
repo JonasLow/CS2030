@@ -6,14 +6,15 @@ class Point {
         this.x = x;
         this.y = y;
     }
-    
+
     public String toString() {
-        return "point (" + String.format("%.3f", this.x) + ", " 
-            + String.format("%.3f", this.y) + ")";
+        return "point (" + String.format("%.3f", this.x) + ", " +
+            String.format("%.3f", this.y) + ")";
     }
 
     public double distanceTo(Point pt) {
-        return Math.sqrt(Math.pow(pt.x - this.x, 2) + Math.pow(pt.y - this.y, 2));
+        return Math.sqrt(Math.pow(pt.x - this.x, 2) +
+                         Math.pow(pt.y - this.y, 2));
     }
 
     public Point midPoint(Point pt) {
@@ -52,6 +53,7 @@ class Point {
     }
 
     public Point moveTo(double theta, double d) {
-        return new Point((this.x + d * Math.cos(theta)), (this.y + d * Math.sin(theta)));
+        return new Point((this.x + d * Math.cos(theta)),
+                         (this.y + d * Math.sin(theta)));
     }
 }
