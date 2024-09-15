@@ -6,7 +6,8 @@ class Simulator {
     private final List<Pair<Integer,Double>> arrivals;
     private final double serviceTime;
 
-    Simulator(int numOfServers, int numOfCustomers, List<Pair<Integer,Double>> arrivals, double serviceTime) {
+    Simulator(int numOfServers, int numOfCustomers, 
+            List<Pair<Integer,Double>> arrivals, double serviceTime) {
         this.numOfServers = numOfServers;
         this.numOfCustomers = numOfCustomers;
         this.arrivals = arrivals;

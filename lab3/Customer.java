@@ -1,10 +1,18 @@
 public class Customer {
-    private final int ident;
+    protected final int ident;
     private final double arrTime;
+    private final double serviceTime;
 
     Customer(int ident, double arrTime) {
         this.ident = ident;
         this.arrTime = arrTime;
+        this.serviceTime = 0;
+    }
+
+    Customer(int ident, double arrTime, double serviceTime) {
+        this.ident = ident;
+        this.arrTime = arrTime;
+        this.serviceTime = serviceTime;
     }
 
     public boolean canBeServed(double time) {
@@ -12,7 +20,7 @@ public class Customer {
     }
 
     public double serveTill(double time) {
-        return this.arrTime + time;
+        return this.serviceTime + time;
     }
 
     @Override
