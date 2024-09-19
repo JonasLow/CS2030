@@ -28,7 +28,7 @@ abstract class Event implements Comparable<Event> {
         } else if (!this.isDone() && other.isDone()) {
             return 1;
         } else {
-            return Integer.compare(this.customer.ident, other.customer.ident);
+            return this.customer.compare(other.customer);
         }
     }
 }

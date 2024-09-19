@@ -1,5 +1,5 @@
 public class Customer {
-    protected final int ident;
+    private final int ident;
     private final double arrTime;
     private final double serviceTime;
 
@@ -21,6 +21,10 @@ public class Customer {
 
     public double serveTill(double time) {
         return this.serviceTime + time;
+    }
+
+    public int compare(Customer other) {
+        return Integer.compare(this.ident, other.ident);
     }
 
     @Override
