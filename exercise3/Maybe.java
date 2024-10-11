@@ -10,11 +10,11 @@ public class Maybe<T> {
         this.value = value;
     }
 
-    static <U> Maybe<U> of(U value) {
+    static <T> Maybe<T> of(T value) {
         if (value == null) {
             throw new NullPointerException();
         }
-        return new Maybe<U>(value);
+        return new Maybe<T>(value);
     }
 
     static <T> Maybe<T> empty() {
