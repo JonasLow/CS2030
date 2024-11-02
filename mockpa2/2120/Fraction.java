@@ -130,6 +130,7 @@ class Fraction extends AbstractNum<List<Integer>> {
                 Num reducedNumerator = numerator.div(gcd);
                 Num reducedDenominator = denominator.div(gcd);
 
+
                 // Extract integer values safely and create a new Fraction
                 return reducedNumerator.opt.flatMap(
                     n_num
