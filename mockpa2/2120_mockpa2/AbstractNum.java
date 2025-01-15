@@ -25,8 +25,7 @@ class AbstractNum<T> {
         if (obj == this) {
             return true;
         } else {
-            if (obj instanceof AbstractNum) {
-                AbstractNum<?> abs = (AbstractNum<?>)obj;
+            if (obj instanceof AbstractNum<?> abs) {
                 return abs.opt.equals(this.opt);
             } else {
                 return false;
